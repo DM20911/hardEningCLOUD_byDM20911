@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" font-family="'Segoe UI',Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#16233f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38e8c6"/>
+      <stop offset="1" stop-color="#5b8cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="340" fill="url(#bg)"/>
+  <g opacity="0.08" stroke="#5b8cff" stroke-width="1">
+    <path d="M0 80 H1200 M0 160 H1200 M0 240 H1200 M150 0 V340 M450 0 V340 M750 0 V340 M1050 0 V340"/>
+  </g>
+  <text x="60" y="120" fill="#ffffff" font-size="58" font-weight="800">hardEning<tspan fill="url(#accent)">CLOUD</tspan></text>
+  <text x="62" y="160" fill="#8fa6c8" font-size="22" letter-spacing="3">by DM20911 · Sombrero Blanco × Optimizaria</text>
+  <text x="60" y="232" fill="#cfe0ff" font-size="26" font-weight="600">Auditoría &amp; Hardening Cloud end-to-end</text>
+  <text x="60" y="270" fill="#7f93b4" font-size="19">Recon total → Detección CIS → Remediación con aprobación → Informe antes/después</text>
+  <g transform="translate(880,70)" font-size="20" font-weight="700" text-anchor="middle">
+    <g transform="translate(0,0)"><rect width="90" height="90" rx="16" fill="#1b2a4a" stroke="#ea4335" stroke-width="2"/><text x="45" y="52" fill="#ea4335">GCP</text></g>
+    <g transform="translate(110,0)"><rect width="90" height="90" rx="16" fill="#1b2a4a" stroke="#ff9900" stroke-width="2"/><text x="45" y="52" fill="#ff9900">AWS</text></g>
+    <g transform="translate(220,0)"><rect width="90" height="90" rx="16" fill="#1b2a4a" stroke="#2ea0f0" stroke-width="2"/><text x="45" y="52" fill="#2ea0f0">AZURE</text></g>
+  </g>
+  <g transform="translate(880,190)" font-size="14" fill="#9fb3d6" text-anchor="middle">
+    <text x="155" y="0">CIS Benchmark · MITRE ATT&amp;CK Cloud · OWASP</text>
+  </g>
+  <rect x="60" y="300" width="1080" height="4" rx="2" fill="url(#accent)"/>
+</svg>

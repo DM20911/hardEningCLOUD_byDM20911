@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: 'Helvetica Neue', Arial, sans-serif; color:#11203a; }
+  .page { width:210mm; min-height:297mm; padding:18mm 16mm; page-break-after: always; position:relative; }
+  .cover { background:linear-gradient(135deg,#0b1020,#16233f); color:#fff; }
+  .cover img { width:100%; border-radius:8px; margin-top:6mm; }
+  h1 { font-size:30pt; margin:0 0 2mm; }
+  h2 { font-size:18pt; color:#16233f; border-bottom:3px solid #38e8c6; padding-bottom:2mm; margin-top:0; }
+  h3 { font-size:13pt; color:#5b8cff; margin-bottom:1mm; }
+  p, li, td { font-size:10.5pt; line-height:1.5; }
+  .sub { color:#8fa6c8; font-size:12pt; }
+  .accent { color:#38e8c6; }
+  .pill { display:inline-block; background:#16233f; color:#cfe0ff; border-radius:20px; padding:3px 12px; font-size:9pt; margin:2px; }
+  .grid { display:flex; gap:6mm; flex-wrap:wrap; }
+  .card { flex:1 1 44%; background:#f3f7ff; border-left:4px solid #5b8cff; border-radius:6px; padding:4mm 5mm; }
+  .card h3 { margin-top:0; }
+  table { width:100%; border-collapse:collapse; margin:3mm 0; }
+  th { background:#16233f; color:#fff; text-align:left; padding:5px 8px; font-size:10pt; }
+  td { border-bottom:1px solid #dde6f5; padding:5px 8px; }
+  .big { font-size:40pt; font-weight:800; color:#38e8c6; }
+  .foot { position:absolute; bottom:10mm; left:16mm; right:16mm; font-size:8.5pt; color:#8fa6c8; border-top:1px solid #dde6f5; padding-top:3mm; }
+  .imgwrap { text-align:center; }
+  .imgwrap img { width:100%; border:1px solid #e3eaf6; border-radius:8px; }
+  ul { margin:2mm 0; padding-left:6mm; }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="page cover">
+  <span class="pill">CIS Benchmark</span><span class="pill">MITRE ATT&amp;CK Cloud</span><span class="pill">OWASP</span>
+  <h1 style="margin-top:8mm;">hardEning<span class="accent">CLOUD</span></h1>
+  <div class="sub">Auditoría &amp; Hardening Cloud end-to-end — GCP · AWS · Azure</div>
+  <img src="../assets/banner.svg"/>
+  <p style="margin-top:10mm; color:#cfe0ff; font-size:12pt;">
+    Una skill multi-runtime (Claude · Gemini · LLM local) que descubre, detecta, corrige y documenta
+    la postura de seguridad de un proyecto cloud completo — con aprobación humana en cada cambio.
+  </p>
+  <div class="foot" style="color:#7f93b4; border-color:#2a3a5c;">
+    Sombrero Blanco × Optimizaria · Brochure técnico · 2026 · Confidencial
+  </div>
+</div>
+
+<!-- PROBLEM / SOLUTION -->
+<div class="page">
+  <h2>El problema y la propuesta</h2>
+  <p>La mayoría de los escáneres de seguridad cloud <b>listan hallazgos y se detienen</b>. El equipo
+  recibe un PDF con cientos de líneas y nadie cierra el ciclo. <b>hardEningCLOUD_byDM20911</b> está
+  diseñada alrededor de una sola idea: dejar la nube <span class="accent">medible y verificablemente
+  más segura</span> que como estaba, con evidencia de antes y después.</p>
+
+  <div class="grid">
+    <div class="card"><h3>Descubre</h3><p>Reconocimiento total de identidades, red, almacenamiento,
+      cómputo, cifrado y logging en la cuenta/proyecto/suscripción.</p></div>
+    <div class="card"><h3>Detecta</h3><p>Clasifica contra CIS Benchmark, con CVSS 3.1 y mapeo a
+      MITRE ATT&amp;CK Cloud y OWASP. Combos de escalada IAM incluidos.</p></div>
+    <div class="card"><h3>Corrige</h3><p>Remediación con <b>aprobación humana previa</b>. Lectura
+      libre; toda escritura se propone, se explica el impacto y se aplica tras un "sí".</p></div>
+    <div class="card"><h3>Documenta</h3><p>Informe con score de postura <b>antes/después</b> y un
+      archivo de evidencias con cada comando y su output.</p></div>
+  </div>
+
+  <h2 style="margin-top:8mm;">Flujo de trabajo</h2>
+  <div class="imgwrap"><img src="../assets/workflow.svg"/></div>
+  <div class="foot">hardEningCLOUD_byDM20911 — pág. 2</div>
+</div>
+
+<!-- BENCHMARK -->
+<div class="page">
+  <h2>Benchmark</h2>
+  <p>Evaluación con subagentes independientes: <b>con skill</b> vs <b>baseline (sin skill)</b>.
+  Mismos prompts, mismas aserciones objetivas, 3 casos reales, 14 aserciones.</p>
+  <div class="imgwrap"><img src="../assets/benchmark.svg"/></div>
+  <table>
+    <tr><th>Caso</th><th>Con skill</th><th>Baseline</th><th>Δ</th></tr>
+    <tr><td>Auditar GCP y remediar</td><td><b>5/5</b></td><td>3/5</td><td class="accent">+40 pts</td></tr>
+    <tr><td>Revisar política IAM AWS (JSON)</td><td><b>5/5</b></td><td>4/5</td><td class="accent">+20 pts</td></tr>
+    <tr><td>Endurecer Azure (solo lectura)</td><td><b>4/4</b></td><td>4/4</td><td>0</td></tr>
+    <tr><td><b>Total</b></td><td><b>14/14 (100%)</b></td><td>11/14 (79%)</td><td class="accent"><b>+21 pts</b></td></tr>
+  </table>
+  <p><b>Lectura:</b> la ventaja proviene de la <b>disciplina de proceso</b> — pedir el modo de
+  trabajo, preflight de CLIs y plan CIS estructurado — más el uso correcto del analizador de IAM.
+  El caso Azure no discrimina (ambos respetan "no toques nada") y se conserva como control de
+  regresión.</p>
+  <div class="foot">hardEningCLOUD_byDM20911 — pág. 3</div>
+</div>
+
+<!-- COVERAGE + RUNTIMES -->
+<div class="page">
+  <h2>Cobertura por nube</h2>
+  <table>
+    <tr><th>Dominio</th><th>AWS</th><th>GCP</th><th>Azure</th></tr>
+    <tr><td>Identidad / IAM</td><td>users, roles, MFA, keys, escaladas</td><td>bindings, SA keys, allUsers</td><td>Entra ID, RBAC, PIM, MFA/CA</td></tr>
+    <tr><td>Almacenamiento</td><td>S3 ACL/policy/encryption</td><td>GCS IAM, uniform access</td><td>Storage blob/HTTPS/SAS</td></tr>
+    <tr><td>Red</td><td>SG, NACL, puertos</td><td>Firewall, Flow Logs</td><td>NSG, IPs, Bastion</td></tr>
+    <tr><td>Cifrado</td><td>EBS/RDS/S3, KMS</td><td>CMEK, default</td><td>Key Vault, TLS</td></tr>
+    <tr><td>Logging</td><td>CloudTrail, GuardDuty</td><td>Audit Logs, SCC</td><td>Diagnostic, Defender</td></tr>
+  </table>
+
+  <h2 style="margin-top:8mm;">Multi-runtime</h2>
+  <div class="grid">
+    <div class="card"><h3>Claude Code / Claude.ai</h3><p><code>claude/SKILL.md</code> — skill nativa con
+      progressive disclosure y subagentes.</p></div>
+    <div class="card"><h3>Gemini CLI</h3><p><code>gemini/GEMINI.md</code> — mismo flujo, tools
+      nativas de Gemini.</p></div>
+    <div class="card"><h3>Codex / agentes</h3><p><code>local-ai/AGENTS.md</code> — compatible con el
+      estándar AGENTS.md.</p></div>
+    <div class="card"><h3>LLM local</h3><p><code>local-ai/ollama-system-prompt.md</code> — Ollama /
+      LM Studio, modo copy-paste por defecto.</p></div>
+  </div>
+
+  <h2 style="margin-top:8mm;">Aviso ético</h2>
+  <p>Asume autorización explícita sobre los objetivos. Toda escritura sobre la nube requiere
+  aprobación humana por diseño. Reglas anti-lockout antes de tocar IAM o firewall de gestión.</p>
+
+  <div class="foot">github.com/DM20911/hardEningCLOUD_byDM20911 · Sombrero Blanco × Optimizaria · MIT</div>
+</div>
+
+</body>
+</html>

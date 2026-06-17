@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" font-family="'Segoe UI',Helvetica,Arial,sans-serif">
+  <rect width="1200" height="260" fill="#0f1626"/>
+  <defs>
+    <linearGradient id="ph" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d2c4d"/><stop offset="1" stop-color="#14213b"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="12" markerHeight="12" refX="8" refY="6" orient="auto">
+      <path d="M0 0 L10 6 L0 12 z" fill="#38e8c6"/>
+    </marker>
+  </defs>
+  <text x="40" y="46" fill="#cfe0ff" font-size="24" font-weight="700">Flujo de la skill</text>
+  <g font-size="17" text-anchor="middle">
+    <g transform="translate(40,80)">
+      <rect width="200" height="120" rx="14" fill="url(#ph)" stroke="#5b8cff"/>
+      <text x="100" y="40" fill="#38e8c6" font-weight="700" font-size="15">FASE 0</text>
+      <text x="100" y="68" fill="#fff" font-weight="700">Intake + Preflight</text>
+      <text x="100" y="92" fill="#9fb3d6" font-size="13">modo trabajo · instala CLIs</text>
+      <text x="100" y="110" fill="#9fb3d6" font-size="13">alcance · remediación</text>
+    </g>
+    <g transform="translate(285,80)">
+      <rect width="200" height="120" rx="14" fill="url(#ph)" stroke="#5b8cff"/>
+      <text x="100" y="40" fill="#38e8c6" font-weight="700" font-size="15">FASE 1</text>
+      <text x="100" y="68" fill="#fff" font-weight="700">Recon total</text>
+      <text x="100" y="92" fill="#9fb3d6" font-size="13">IAM · red · storage</text>
+      <text x="100" y="110" fill="#9fb3d6" font-size="13">cifrado · logging</text>
+    </g>
+    <g transform="translate(530,80)">
+      <rect width="200" height="120" rx="14" fill="url(#ph)" stroke="#5b8cff"/>
+      <text x="100" y="40" fill="#38e8c6" font-weight="700" font-size="15">FASE 2</text>
+      <text x="100" y="68" fill="#fff" font-weight="700">Análisis CIS</text>
+      <text x="100" y="92" fill="#9fb3d6" font-size="13">Prowler · script</text>
+      <text x="100" y="110" fill="#9fb3d6" font-size="13">CVSS · score inicial</text>
+    </g>
+    <g transform="translate(775,80)">
+      <rect width="200" height="120" rx="14" fill="url(#ph)" stroke="#ffb454"/>
+      <text x="100" y="40" fill="#ffb454" font-weight="700" font-size="15">FASE 3</text>
+      <text x="100" y="68" fill="#fff" font-weight="700">Remediación</text>
+      <text x="100" y="92" fill="#9fb3d6" font-size="13">gate humano</text>
+      <text x="100" y="110" fill="#9fb3d6" font-size="13">antes/después</text>
+    </g>
+    <g transform="translate(1020,80)">
+      <rect width="140" height="120" rx="14" fill="url(#ph)" stroke="#38e8c6"/>
+      <text x="70" y="40" fill="#38e8c6" font-weight="700" font-size="15">FASE 4</text>
+      <text x="70" y="68" fill="#fff" font-weight="700">Informe</text>
+      <text x="70" y="92" fill="#9fb3d6" font-size="13">Δ score</text>
+      <text x="70" y="110" fill="#9fb3d6" font-size="13">evidencias</text>
+    </g>
+  </g>
+  <g stroke="#38e8c6" stroke-width="2" marker-end="url(#arr)" fill="none">
+    <path d="M242 140 H281"/><path d="M487 140 H526"/><path d="M732 140 H771"/><path d="M977 140 H1016"/>
+  </g>
+</svg>
